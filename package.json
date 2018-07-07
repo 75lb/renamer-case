@@ -1,10 +1,13 @@
 {
   "name": "renamer-case",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "renamer plugin to set the case of a filename",
   "repository": "https://github.com/75lb/renamer-case.git",
-  "keywords": [ "renamer", "case" ],
+  "keywords": [
+    "renamer",
+    "case"
+  ],
   "license": "MIT",
   "engines": {
     "node": ">=8"
