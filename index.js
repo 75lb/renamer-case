@@ -1,6 +1,6 @@
 const path = require('path')
 const lodash = require('lodash')
-const caseOptions = [ 'camel-case', 'kebab-case', 'lower-case', 'upper-case', 'snake-case', 'start-case' ]
+const caseOptions = [ 'camel', 'kebab', 'lower', 'upper', 'snake', 'start' ]
 
 module.exports = PluginBase => class RenamerCase extends PluginBase {
   optionDefinitions () {
