@@ -13,15 +13,16 @@ module.exports = PluginBase => class RenamerCase extends PluginBase {
   }
   replace (filePath, options) {
     const file = path.parse(filePath)
+    let output = filePath
     if (options.case) {
       if (!caseOptions.includes(options.case)) {
         throw new Error(`Invalid case, possible values: ${caseOptions.join(', ')}.`)
       }
       const caseFunction = lodash[lodash.camelCase(options.case + '-case')]
       if (caseFunction) {
-        return path.join(file.dir, file.name.replace(file.name, caseFunction(file.name)) + file.ext)
+        output = path.join(file.dir, file.name.replace(file.name, caseFunction(file.name)) + file.ext)
       }
     }
-    return filePath
+    return output
   }
 }

@@ -14,12 +14,13 @@
     "node": ">=8"
   },
   "scripts": {
-    "test": "test-runner test.js"
+    "test": "nyc test-runner test.js"
   },
   "dependencies": {
     "lodash": "^4.17.10"
   },
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "mkdirp2": "^1.0.4",
     "renamer": "^1.0.0-5",
     "rimraf": "^2.6.2",

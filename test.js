@@ -1,5 +1,5 @@
 const TestRunner = require('test-runner')
-const RenamerCase = require('./')
+const renamerCase = require('./')
 const Renamer = require('renamer')
 const mkdirp = require('mkdirp2')
 const path = require('path')
@@ -24,7 +24,7 @@ runner.test('simple', function () {
   const renamer = new Renamer()
   renamer.rename({
     files: `${testRoot}/${this.index}/one two`,
-    plugin: RenamerCase,
+    plugin: renamerCase,
     case: 'camel'
   })
   a.strictEqual(fs.existsSync(`${testRoot}/${this.index}/one two`), false)
@@ -38,10 +38,17 @@ runner.test('invalid case', function () {
     () => {
       renamer.rename({
         files: `${testRoot}/${this.index}/one two`,
-        plugin: RenamerCase,
+        plugin: renamerCase,
         case: 'broken'
       })
     },
     /Invalid case/
   )
+})
+
+runner.test('optionDefinitions', function () {
+  const Plugin = renamerCase(class {})
+  const plugin = new Plugin()
+  const result = plugin.optionDefinitions()
+  a.strictEqual(result.length, 1)
 })

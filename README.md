@@ -7,4 +7,37 @@
 
 # renamer-case
 
-[renamer](https://github.com/75lb/renamer) plugin to set the case of a filename.
+[Renamer](https://github.com/75lb/renamer) plugin to set the case of a filename.
+
+### Install
+
+```
+$ npm install -g renamer renamer-case
+```
+
+### Use
+
+```
+
+$ tree -N
+.
+├── One one
+└── One two
+
+0 directories, 2 files
+
+$ renamer -p case --case camel *
+✔︎ One one → oneOne
+✔︎ One two → oneTwo
+
+$ tree -N
+.
+├── oneOne
+└── oneTwo
+
+0 directories, 2 files
+```
+
+* * *
+
+&copy; 2018 Lloyd Brookes <75pound@gmail.com>.
