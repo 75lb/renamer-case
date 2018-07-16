@@ -3,6 +3,10 @@ const lodash = require('lodash')
 const caseOptions = [ 'camel', 'kebab', 'lower', 'upper', 'snake', 'start' ]
 
 module.exports = PluginBase => class RenamerCase extends PluginBase {
+  description () {
+    return 'Renamer plugin to set the case of a filename.'
+  }
+
   optionDefinitions () {
     return [
       {
