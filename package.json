@@ -9,13 +9,14 @@
     "case",
     "renamer-plugin"
   ],
-  "license": "MIT",
+  "licence": "MIT",
   "engines": {
     "node": ">=8"
   },
   "scripts": {
     "test": "nyc test-runner test.js"
   },
+  "files": [ "index.js" ],
   "dependencies": {
     "lodash": "^4.17.10"
   },
