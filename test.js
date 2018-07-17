@@ -52,3 +52,10 @@ runner.test('optionDefinitions', function () {
   const result = plugin.optionDefinitions()
   a.strictEqual(result.length, 1)
 })
+
+runner.test('description', function () {
+  const Plugin = renamerCase(class {})
+  const plugin = new Plugin()
+  const result = plugin.description()
+  a.ok(result)
+})

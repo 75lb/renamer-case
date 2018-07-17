@@ -9,6 +9,8 @@
 
 [Renamer](https://github.com/75lb/renamer) plugin to set the case of a filename.
 
+Possible values: `camel`, `kebab`, `lower`, `upper`, `snake` and `start`. It uses the [lodash](https://lodash.com/docs/4.17.10#camelCase) methods by the same name.
+
 ### Install
 
 ```
