@@ -22,7 +22,6 @@ $ npm install -g renamer renamer-case
 
 ```
 $ tree -N
-
 .
 ├── One one
 └── One two
