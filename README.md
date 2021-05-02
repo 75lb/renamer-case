@@ -20,18 +20,22 @@ $ npm install -g renamer renamer-case
 
 ### Use
 
-```
+<pre><code>$ tree -N
 
-$ tree -N
 .
 ├── One one
 └── One two
 
 0 directories, 2 files
 
-$ renamer -p case --case camel *
-✔︎ One one → oneOne
-✔︎ One two → oneTwo
+$ renamer --chain renamer-case --case camel * --dry-run
+
+<u>Dry run</u>
+
+✔︎ one one → oneOne
+✔︎ one two → oneTwo
+
+Rename complete: 1 of 1 files renamed.
 
 $ tree -N
 .
@@ -39,7 +43,7 @@ $ tree -N
 └── oneTwo
 
 0 directories, 2 files
-```
+</code></pre>
 
 * * *
 
