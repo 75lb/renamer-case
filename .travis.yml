@@ -1,6 +1,5 @@
 language: node_js
 node_js:
-  - 8
-  - 9
-  - 10
-after_script: nyc report --reporter=text-lcov | coveralls
+  - 14
+  - 15
+  - 16

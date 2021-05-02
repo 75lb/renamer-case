@@ -1,10 +1,10 @@
-const path = require('path')
-const lodash = require('lodash')
-const caseOptions = [ 'camel', 'kebab', 'lower', 'upper', 'snake', 'start' ]
+import path from 'path'
+import lodash from 'lodash'
+const caseOptions = ['camel', 'kebab', 'lower', 'upper', 'snake', 'start']
 
-module.exports = PluginBase => class RenamerCase extends PluginBase {
+class RenamerCase {
   description () {
-    return 'Renamer plugin to set the case of a filename.'
+    return 'Renamer plugin to set the case of one or more files.'
   }
 
   optionDefinitions () {
@@ -15,6 +15,7 @@ module.exports = PluginBase => class RenamerCase extends PluginBase {
       }
     ]
   }
+
   replace (filePath, options) {
     const file = path.parse(filePath)
     let output = filePath
@@ -30,3 +31,5 @@ module.exports = PluginBase => class RenamerCase extends PluginBase {
     return output
   }
 }
+
+export default RenamerCase
