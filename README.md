@@ -8,7 +8,7 @@
 
 # renamer-case
 
-[Renamer](https://github.com/75lb/renamer) replace chain plugin to set the case of one or more files or directories.
+[Renamer](https://github.com/75lb/renamer) replace chain plugin to set the case of one or more files and/or directories. See [this tutorial](https://github.com/75lb/renamer/wiki/How-to-use-replace-chain-plugins) to learn how to use renamer plugins.
 
 Possible values: `camel`, `kebab`, `lower`, `upper`, `snake` and `start`. It uses the [lodash](https://lodash.com/docs/4.17.10#camelCase) methods by the same name.
 
@@ -20,6 +20,8 @@ $ npm install -g renamer renamer-case
 
 ### Use
 
+Example usage. Remove the `--dry-run` option to rename the files on disk.
+
 ```
 $ tree -N
 .
@@ -28,7 +30,7 @@ $ tree -N
 
 0 directories, 2 files
 
-$ renamer --chain renamer-case --case camel *
+$ renamer --chain renamer-case --case camel --dry-run * 
 
 ✔︎ one one → oneOne
 ✔︎ one two → oneTwo
